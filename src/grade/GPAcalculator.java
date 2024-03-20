@@ -1,4 +1,7 @@
 package grade;
+
+import java.text.DecimalFormat;
+
 public class GPAcalculator {
     public static void main(String[] args) {
         Student student = new Student("Alice", "123456");
@@ -10,8 +13,8 @@ public class GPAcalculator {
         student.addCourse(course2);
         student.addCourse(course3);
         student.displayStudentInfo();
-
+        DecimalFormat decimalFormat = new DecimalFormat("#.##");
         double totalGPA = student.calculateTotalGPA();
-        System.out.println("Total GPA: " + totalGPA);
+        System.out.println("Total GPA: " + decimalFormat.format(totalGPA));
     }
 }
