@@ -1,8 +1,7 @@
 package grade;
 import java.util.ArrayList;
 import java.util.List;
-
-class Student {
+class Student{
     String name;
     String studentId;
     List<Course> courses;
