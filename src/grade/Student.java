@@ -13,7 +13,7 @@ class Student{
     }
 
     public void addCourse(Course course) {
-        courses.add(course);
+        this.courses.add(course);
     }
 
     public double calculateTotalGPA() {
