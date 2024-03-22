@@ -1,10 +1,18 @@
 package grade;
 
-class Course {
-    String courseName;
-    int credit;
-    int score;
+import com.alibaba.fastjson.annotation.JSONField;
 
+class Course {
+    @JSONField(name = "courseName",ordinal = 1)
+    public String courseName;
+
+    @JSONField(name = "credit",ordinal = 2)
+    public int credit;
+
+    @JSONField(name = "score",ordinal = 3)
+    public int score;
+
+    public Course(){}; // for JSON
     public Course(String courseName, int credit, int score) {
         this.courseName = courseName;
         this.credit = credit;

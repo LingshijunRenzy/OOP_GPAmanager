@@ -1,11 +1,20 @@
 package grade;
+
+import com.alibaba.fastjson.annotation.JSONField;
+
 import java.util.ArrayList;
 import java.util.List;
 class Student{
-    String name;
-    String studentId;
-    List<Course> courses;
+    @JSONField(name = "name",ordinal = 1)
+    public String name;
 
+    @JSONField(name = "id",ordinal = 2)
+    public String studentId;
+
+    @JSONField(name = "courses",ordinal = 3)
+    public List<Course> courses;
+
+    public Student(){}; // for JSON
     public Student(String name, String studentId) {
         this.name = name;
         this.studentId = studentId;
